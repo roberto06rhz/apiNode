@@ -3,6 +3,17 @@ const express = require('express');
 const router = express.Router();
 router.use(express.json());
 
+const Usuario = require('./usuarioModel')
+
+const listaUsuarios = [
+    {
+        id:1,
+        nome:'roberto',
+        email:'roberto@usuarios.com',
+        senha:'senhaRoberto22'
+    }
+]
+
 router.get('/', async (req, res) => {
     res.send({ "message": "todos os alunos" });
 });
